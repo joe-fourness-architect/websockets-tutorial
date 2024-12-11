@@ -1,7 +1,7 @@
 import asyncio
 import json
-import secrets
 import os
+import secrets
 import signal
 
 from websockets.asyncio.server import broadcast, serve
