@@ -9,7 +9,12 @@ from websockets.asyncio.server import broadcast, serve
 from connect4 import PLAYER1, PLAYER2, Connect4
 import logging
 
-logging.basicConfig(format="%(message)s", level=logging.DEBUG)
+logger = logging.getLogger('websockets')
+logger.setLevel(logging.INFO) # DEBUG
+logger.addHandler(logging.StreamHandler())
+
+#logging.basicConfig(format="%(message)s", level=logging.DEBUG)
+
 JOIN = {}
 WATCH = {}
 
